@@ -63,6 +63,11 @@ function App() {
 }
 
 function Hit(props) {
+  // const link = props.hit.action;
+  // const regex = /href="(https?:\/\/(?:www\.)?.+?\.ipynb)"/;
+  // const url = link.match(regex)[1];
+  // console.log(url);
+
   return (
     <div>
       {/* <a href={props.hit.action}> */}
