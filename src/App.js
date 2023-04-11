@@ -27,7 +27,7 @@ function App() {
         </h1>
         <p className="header-subtitle">
           using{' '}
-          <a href="https://github.com/algolia/react-instantsearch">
+          <a href="https://github.com/srini047/naas-algolia-search">
             React InstantSearch
           </a>
         </p>
