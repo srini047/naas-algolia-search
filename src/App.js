@@ -36,7 +36,7 @@ function App() {
           searchClient={searchClient}
           // apiKey="ef768a413dab8f5b46866d6414c6554e"
           // appId="YSNJEQILKB"
-          indexName="naas-ai"
+          indexName="naas-templates-index"
         >
           <Configure hitsPerPage={8} />
           <div className="search-panel">
