@@ -16,6 +16,8 @@ const searchClient = algoliasearch(
   'ef768a413dab8f5b46866d6414c6554e'
 );
 
+// console.log(props.hit.action);
+
 function App() {
   return (
     <div>
@@ -36,7 +38,7 @@ function App() {
           searchClient={searchClient}
           indexName="naas-templates-index"
         >
-          <Configure hitsPerPage={8} />
+          <Configure hitsPerPage={5} />
           <div className="search-panel">
             <div className="search-panel__filters"></div>
 
@@ -44,7 +46,7 @@ function App() {
               <SearchBox
                 className="searchbox"
                 translations={{
-                  placeholder: '',
+                  placeholder: 'Search from the templates factory...',
                 }}
               />
               <Hits hitComponent={Hit} />
@@ -62,14 +64,22 @@ function App() {
 
 function Hit(props) {
   return (
-    <article>
-      <h1>
-        <Highlight attribute="tool" hit={props.hit} />
-        <Highlight attribute="tags" hit={props.tags} />
-        {/* <Highlight attribute="notebook" hit={props.notebook} />
-        <Highlight attribute="description" hit={props.description} /> */}
-      </h1>
-    </article>
+    <div>
+      {/* <a href={props.hit.action}> */}
+        <article>
+          <h1>
+            <Highlight attribute="notebook" hit={props.hit} />
+          </h1>
+          <h4>
+            Tool: <Highlight attribute="tool" hit={props.hit} />
+          </h4>
+          <p>Tags: {props.hit.tags}</p>
+          <p>
+            <Highlight attribute="description" hit={props.hit} />
+          </p>
+        </article>
+      {/* </a> */}
+    </div>
   );
 }
 
