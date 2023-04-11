@@ -34,8 +34,6 @@ function App() {
       <div className="container">
         <InstantSearch
           searchClient={searchClient}
-          // apiKey="ef768a413dab8f5b46866d6414c6554e"
-          // appId="YSNJEQILKB"
           indexName="naas-templates-index"
         >
           <Configure hitsPerPage={8} />
@@ -67,6 +65,9 @@ function Hit(props) {
     <article>
       <h1>
         <Highlight attribute="tool" hit={props.hit} />
+        <Highlight attribute="tags" hit={props.tags} />
+        {/* <Highlight attribute="notebook" hit={props.notebook} />
+        <Highlight attribute="description" hit={props.description} /> */}
       </h1>
     </article>
   );
