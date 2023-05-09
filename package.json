@@ -9,6 +9,8 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.9.2",
+    "@algolia/autocomplete-plugin-query-suggestions": "^1.9.2",
     "algoliasearch": "4",
     "react": "18.1.0",
     "react-dom": "18.1.0",
